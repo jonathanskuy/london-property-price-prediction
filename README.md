@@ -44,7 +44,14 @@ Therefore, there is a need for a data-driven solution that can analyse multiple 
   - **Verbose:** 0
 
 ## Results
-- a
+- Base Model with Default Parameters
+  - MAE: ~0.175
+  - RMSE: ~0.247
+  - R²: ~0.840
+- Tuned Model
+  - MAE: ~0.172
+  - RMSE: ~0.244
+  - R²: ~0.844
 
 ### Key Insights
 - a
