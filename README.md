@@ -44,14 +44,14 @@ Therefore, there is a need for a data-driven solution that can analyse multiple 
   - **Verbose:** 0
 
 ## Results
-- Base Model with Default Parameters
-  - MAE: ~0.175
-  - RMSE: ~0.247
-  - R²: ~0.840
-- Tuned Model
-  - MAE: ~0.172
-  - RMSE: ~0.244
-  - R²: ~0.844
+- **Base Model with Default Parameters**
+  - **MAE:** ~0.175
+  - **RMSE:** ~0.247
+  - **R²:** ~0.840
+- **Tuned Model**
+  - **MAE:** ~0.172
+  - **RMSE:** ~0.244
+  - **R²:** ~0.844
 
 ### Key Insights
 - a
@@ -92,7 +92,7 @@ pip install -r requirements.txt
 - a
 
 ## Contributors
-- **Jonathan:** Contributed to both data preparation and modelling. Performed additional data cleaning on top of the initial preprocessing to ensure consistency across datasets. Led feature engineering by transforming and combining datasets into a unified structure. Prepared training and testing datasets and worked closely with Myo during the modelling phase. Implemented the tuned model into an interactive interface where users can easily input their house’s postcode and structural characteristics and obtain predicted prices. Also contributed to model comparison and was vital to the final model choice decision-making process.
+- **Jonathan:** Contributed to both data preparation and modelling. Performed additional and final data cleaning on top of the initial preprocessing to ensure consistency across datasets. Led feature engineering by transforming and combining datasets into a unified structure. Prepared training and testing datasets and worked closely with Myo during the modelling phase. Implemented the tuned model into an interactive interface where users can easily input their house’s postcode and structural characteristics and obtain predicted prices. Also contributed to model comparison and was vital to the final model choice decision-making process.
 - **Anuf:** Coordinated the project along with Jonathan and also led evaluation and report writing, including performance analysis, critical assessment, and all the documentation. Additionally, cross team collaboration supports by assisting in verifying data consistency and contributing feedback to processing, modelling and evaluation stages, and was a part of the early data gathering phase. Compared different models and contributed to model tuning.
 - **Cliff:** Supported the report development and evaluation phase alongside Anuf by assisting in structuring the report, reviewing analysis, and validating the interpretation of results. Also contributed feedback across other stages to ensure consistency and data gathering. Played a key role in model comparison.
 - **Myo:** Was mainly focused on initial model development and training using the prepared datasets. Collaborated with Jonathan to understand feature design and ensure appropriate model selection. Also contributed to refining output based on feedback from the evaluation stage.
