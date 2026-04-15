@@ -1,0 +1,22 @@
+name: london-property-price-predictor
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - geopandas
+  - fiona
+  - pyproj
+  - shapely
+  - pip
+  - pip:
+    - pandas
+    - ezodf
+    - numpy
+    - matplotlib
+    - scikit-learn
+    - lightgbm
+    - catboost
+    - joblib
+    - ipywidgets
+    - IPython

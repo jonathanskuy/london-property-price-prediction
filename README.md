@@ -75,7 +75,10 @@ a
 ## Installation
 To install everything required to run the notebooks and scripts in this project locally, users can run the following command beforehand.
 ```bash
-pip install -r requirements.txt
+conda env create -f environment.yml
+```
+```bash
+conda activate london-property-price-predictor
 ```
 
 ## How to Run
