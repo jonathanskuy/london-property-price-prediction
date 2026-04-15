@@ -1,0 +1,11 @@
+pandas
+geopandas[all]
+ezodf
+numpy
+matplotlib
+scikit-learn
+lightgbm
+catboost
+joblib
+ipywidgets
+IPython
