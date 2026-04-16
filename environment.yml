@@ -20,3 +20,4 @@ dependencies:
     - joblib
     - ipywidgets
     - IPython
+    - gradio

@@ -9,3 +9,4 @@ catboost
 joblib
 ipywidgets
 IPython
+gradio
