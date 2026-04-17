@@ -64,6 +64,7 @@ tenure = widgets.Dropdown(value='Freehold', options=['Leasehold', 'Freehold'], d
 energy_rating = widgets.Dropdown(value='E', options=['A', 'B', 'C', 'D', 'E', 'F', 'G'], description='Energy Rating:')
 
 predict_button = widgets.Button(description='Predict')
+predict_button._click_handlers.callbacks.clear()
 predict_button.on_click(predict_price)
 
 display(postcode, bedrooms, bathrooms, living_rooms, floor_area, property_type, tenure, energy_rating, predict_button, output)
