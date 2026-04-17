@@ -32,7 +32,7 @@ output = widgets.Output()
 
 def predict_price(button):
     with output:
-        output.clear_output()
+        output.clear_output(wait=True)
         df_input = pd.DataFrame([{
             'postcode': postcode.value,
             'bedrooms': bedrooms.value,
