@@ -62,6 +62,9 @@ def add_lat_long(df):
 
     df = df.drop(columns=['postcode'])
 
+    if df[['latitude', 'longitude']].isnull().any().any():
+        raise ValueError('Postcode not found in dataset, coordinates unresolved.')
+
     return df
 
 def add_property_features(df):

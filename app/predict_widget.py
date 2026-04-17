@@ -44,12 +44,15 @@ def predict_price(button):
             'currentEnergyRating': energy_rating.value
         }])
 
-        print('Preprocessing inputs...')
-        df_processed = preprocess_input(df_input)
-        df_processed = df_processed.reindex(columns=feature_cols, fill_value=0)
-        print('Preprocessing completed! Predicting...')
-        pred = np.exp(model.predict(df_processed))
-        print(f'Predicted Property Price: £{pred[0]:,.0f}')
+        try:
+            print('Preprocessing inputs...')
+            df_processed = preprocess_input(df_input)
+            df_processed = df_processed.reindex(columns=feature_cols, fill_value=0)
+            print('Preprocessing completed! Predicting...')
+            pred = np.exp(model.predict(df_processed))
+            print(f'Predicted Property Price: £{pred[0]:,.0f}')
+        except ValueError as error_msg:
+            print(f'Error: {error_msg}')
 
 postcode = widgets.Text(value='SW3 5BL', description='Postcode:', placeholder='e.g. SW3 5BL')
 bedrooms = widgets.IntSlider(value=1, min=1, max=6, step=1, description='Bedrooms:')
