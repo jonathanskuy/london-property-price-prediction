@@ -24,10 +24,15 @@ Therefore, there is a need for a data-driven solution that can analyse multiple 
 
 ## Methodology
 ### Data Cleaning
-- a
+- Missing values
+- Duplicate removal
+- Normalisation
+- Encoding
 
 ### Feature Engineering
-- a
+- Distance to city centre
+- Combined features
+- Feature selection
 
 ### Model Development
 - **Models Considered:** Linear Regression, Random Forest, XGBoost, LightGBM, CatBoost
@@ -54,7 +59,9 @@ Therefore, there is a need for a data-driven solution that can analyse multiple 
   - **R²:** ~0.844
 
 ### Key Insights
-- a
+- The system accurately predicts lower/middle-ranged property prices.
+- There are some limitations with predicting higher-valued property prices.
+- Generally, the system offers precise and accurate predictions, successfully capturing the essential variables affecting housing prices. Nonetheless, there is room for improvement in terms of acquiring more information and refining the features and the model itself.
 
 ## Demo
 A user-friendly demo notebook ("app/property_price_prediction.ipynb") is provided to simulate the real-world implementation of this system.
@@ -70,18 +77,64 @@ To obtain predicted property price, the user can input:
 After filling all input fields and clicking the "Predict" button, the system will generate and display the predicted property price based on its details provided by the user.
 
 ## Project Structure
-a
+```
+london-property-price-prediction/
+├─ app/
+│  ├─ model.py
+│  ├─ predict_widget.py
+│  ├─ preprocess.py
+│  ├─ property_price_prediction.ipynb
+├─ data/
+│  ├─ modelling/
+│  │  ├─ complete_modelling_data.csv
+│  │  ├─ X_test.csv
+│  │  ├─ X_train.csv
+│  │  ├─ y_test.csv
+│  │  ├─ y_train.csv
+│  ├─ partially_processed/
+│  │  ├─ crime.csv
+│  │  ├─ onspd.csv
+│  │  ├─ properties.csv
+│  │  ├─ schools.csv
+│  │  ├─ stops.csv
+│  ├─ processed/
+│  │  ├─ crime_clean.csv
+│  │  ├─ onspd_clean.csv
+│  │  ├─ properties_clean.csv
+│  │  ├─ schools_clean.csv
+│  │  ├─ stops_clean.csv
+│  ├─ raw/
+│  │  ├─ five-year-ofsted-inspection-data_state-funded-schools.ods
+│  │  ├─ ONSPD_AUG_2025_UK.csv
+│  │  ├─ Stops.csv
+├─ models/
+│  ├─ feature_columns.pkl
+│  ├─ property_price_predictor.pkl
+├─ notebooks/
+│  ├─ initial_data_cleaning/
+│  │  ├─ kk.ipynb
+│  │  ├─ ofsted.ipynb
+│  │  ├─ stop.ipynb
+│  ├─ modelling/
+│  │  ├─ catboost.ipynb
+│  │  ├─ lightgbm.ipynb
+│  │  ├─ random_forest.ipynb
+│  ├─ demo.ipynb
+│  ├─ feature_engineering.ipynb
+│  ├─ final_data_cleaning.ipynb
+├─ .gitattributes
+├─ README.md
+├─ requirements.txt
+```
 
 ## Installation
-To install everything required to run the notebooks and scripts in this project locally, users can run the following command beforehand.
-```bash
-conda env create -f environment.yml
-```
-```bash
-conda activate london-property-price-predictor
-```
+**If the user has Git LFS installed in their system, they can properly pull this repository without any issues with datasets.**
+
+It is acknowledged that users without Git LFS installed in their system may face issues with datasets being shown as Git LFS pointers when downloading this repository, causing errors in loading datasets. Therefore, users without Git LFS installed in their system or users facing other issues concerning the datasets will have to download the datasets from [this Google Drive Link]().
 
 ## How to Run
+After opening this repository locally in their system, users will have to run this command in the terminal to install dependencies required: ```pip install -r requirements.txt```
+
 ### Running the Demo Only (For Users)
 1. Open the notebook ```app/property_price_prediction.ipynb```
 2. Run the cell
@@ -99,12 +152,9 @@ conda activate london-property-price-predictor
 9. Run ```notebooks/demo.ipynb```
 
 ## Limitations
-- Due to certain technical setbacks, some files from the initial data cleaning were lost and unable to be recovered, but this does not effect the final product/implementation.
-- Due to GitHub repository size limits, the original ONS Postcode Directory dataset is omitted from this repository due to its file size being too large.
-- a
+Even though the model has proven itself highly effective, there are some limitations. Firstly, the model depends heavily on data accuracy; for instance, any incomplete data can distort the results. The second drawback of the model is that there are some variables present in reality but not in the model, including the state of the property, market changes, and economic tendencies. Moreover, it is worth noting that the accuracy of the model declines when dealing with high-priced properties.
 
-## Recommendations for Future Work
-- a
+There are many ways that the existing model can be improved. First, by adding other datasets like economic indicators or even data about the conditions of the property being sold. Second, the model can be refined through better feature engineering and hyperparameter tuning. Third, experimenting with new algorithms or even building an ensemble might yield better results as well as a real-world application of the algorithm.
 
 ## Contributors
 - **Jonathan:** Contributed to both data preparation and modelling. Performed additional and final data cleaning on top of the initial preprocessing to ensure consistency across datasets. Led feature engineering by transforming and combining datasets into a unified structure. Prepared training and testing datasets and worked closely with Myo during the modelling phase. Implemented the tuned model into an interactive interface where users can easily input their house’s postcode and structural characteristics and obtain predicted prices. Also contributed to model comparison and was vital to the final model choice decision-making process.
