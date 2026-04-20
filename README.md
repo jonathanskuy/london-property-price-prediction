@@ -82,9 +82,21 @@ conda activate london-property-price-predictor
 ```
 
 ## How to Run
-1. Open the notebook "app/property_price_prediction.ipynb"
+### Running the Demo Only (For Users)
+1. Open the notebook ```app/property_price_prediction.ipynb```
 2. Run the cell
 3. Enter details of the property and click the "Predict" button
+
+### Running the Full Pipeline (For Reviewers/Markers)
+1. Run ```notebooks/initial_data_cleaning/kk.ipynb```
+2. Run ```notebooks/initial_data_cleaning/ofsted.ipynb```
+3. Run ```notebooks/initial_data_cleaning/stop.ipynb```
+4. Run ```notebooks/final_data_cleaning.ipynb```
+5. Run ```notebooks/feature_engineering.ipynb```
+6. Run ```notebooks/modelling/random_forest.ipynb```
+7. Run ```notebooks/modelling/lightgbm.ipynb```
+8. Run ```notebooks/modelling/catboost.ipynb```
+9. Run ```notebooks/demo.ipynb```
 
 ## Limitations
 - Due to certain technical setbacks, some files from the initial data cleaning were lost and unable to be recovered, but this does not effect the final product/implementation.
