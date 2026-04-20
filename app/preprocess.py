@@ -1,7 +1,6 @@
 import pandas as pd
 import numpy as np
 from sklearn.neighbors import BallTree
-import geopandas as gpd
 
 df_onspd = pd.read_csv('../data/processed/onspd_clean.csv')
 df_stops = pd.read_csv('../data/processed/stops_clean.csv')
@@ -10,7 +9,6 @@ df_rail = df_stops[df_stops['stoptype'] == 'RLY']
 df_schools = pd.read_csv('../data/processed/schools_clean.csv')
 df_good_schools = df_schools[df_schools['Overall effectiveness'].isin([1, 2])]
 df_crime = pd.read_csv('../data/processed/crime_clean.csv')
-df_crime['geometry'] = gpd.points_from_xy(df_crime.longitude, df_crime.latitude)
 
 CENTRE_LAT = 51.50734
 CENTRE_LONG = -0.12765
