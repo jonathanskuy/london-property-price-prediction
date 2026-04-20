@@ -151,6 +151,9 @@ After opening this repository locally in their system, users will have to run th
 8. Run ```notebooks/modelling/catboost.ipynb```
 9. Run ```notebooks/demo.ipynb```
 
+### Online Interactive Demo
+There is also an online interactive demo for this project, which users can easily access without having to install anything. The online interactive demo can be accessed [here](https://huggingface.co/spaces/jonathanskuy/london-property-price-predictor).
+
 ## Limitations
 Even though the model has proven itself highly effective, there are some limitations. Firstly, the model depends heavily on data accuracy; for instance, any incomplete data can distort the results. The second drawback of the model is that there are some variables present in reality but not in the model, including the state of the property, market changes, and economic tendencies. Moreover, it is worth noting that the accuracy of the model declines when dealing with high-priced properties.
 
