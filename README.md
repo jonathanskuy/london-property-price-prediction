@@ -130,7 +130,7 @@ london-property-price-prediction/
 ## Installation
 **If the user has Git LFS installed in their system, they can properly pull this repository without any issues with datasets.**
 
-It is acknowledged that users without Git LFS installed in their system may face issues with datasets being shown as Git LFS pointers when downloading this repository, causing errors in loading datasets. Therefore, users without Git LFS installed in their system or users facing other issues concerning the datasets will have to download the datasets from [this Google Drive Link]().
+It is acknowledged that users without Git LFS installed in their system may face issues with datasets being shown as Git LFS pointers when downloading this repository, causing errors in loading datasets. Therefore, users without Git LFS installed in their system or users facing other issues concerning the datasets will have to download the datasets from [this Google Drive Link](https://drive.google.com/drive/folders/1a1eqAbv9xaGYVSZr58URcUxglbDFyJ_F?usp=sharing) and replace the existing data/ folder with the one downloaded from the Google Drive.
 
 ## How to Run
 After opening this repository locally in their system, users will have to run this command in the terminal to install dependencies required: ```pip install -r requirements.txt```
