@@ -35,7 +35,7 @@ Therefore, there is a need for a data-driven solution that can analyse multiple 
 - Feature selection
 
 ### Model Development
-- **Models Considered:** Linear Regression, Random Forest, XGBoost, LightGBM, CatBoost
+- **Models Considered:** Random Forest, LightGBM, CatBoost
 - **Model Used:** CatBoost
 - **Target Variable:** Log-Transformed Property Price
 - **Train/Test Split:** 80/20
